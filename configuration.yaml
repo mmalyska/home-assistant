@@ -1,0 +1,21 @@
+# Enables configuration UI
+config:
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Person component
+person:
+
+# Discover some devices automatically
+discovery:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies: !secret http_trusted_proxies
