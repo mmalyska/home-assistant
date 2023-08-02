@@ -1,7 +1,7 @@
 # Enables configuration UI
 config:
 
-# Configure a default setup of Home Assistant (frontend, api, etc)
+# Loads default set of integrations. Do not remove.
 default_config:
 
 # Person component
@@ -19,3 +19,11 @@ sun:
 http:
   use_x_forwarded_for: true
   trusted_proxies: !secret http_trusted_proxies
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
